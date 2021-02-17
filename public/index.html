@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./styles/css/main.css" />
+    <link rel="stylesheet" href="./styles/css/index.css" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><img src="./assets/logo.png" alt="logomarca" /></div>
+      <nav class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Contact</a></li>
+      </nav>
+    </div>
+    <section class="content">
+      <div class="text-box">
+        <h1>It's not just Coffee</h1>
+        <h1>It's <strong>Starbucks</strong></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          dignissimos distinctio nesciunt numquam laudantium incidunt
+          praesentium ratione iste. Nisi soluta odio in sint blanditiis adipisci
+          mollitia voluptatum dolorem modi nam!
+        </p>
+      </div>
+      <a href="#" class="button">learn more</a>
+      <nav class="imageList">
+        <li>
+          <img
+            src="./assets/thumb1.png"
+            alt="shake 1"
+            onclick="imgSlider('./assets/img1.png');changeCircleColor('#017143')"
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/thumb2.png"
+            alt="shake 2"
+            onclick="imgSlider('./assets/img2.png');changeCircleColor('#eb7495')"
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/thumb3.png"
+            alt="shake 3"
+            onclick="imgSlider('./assets/img3.png');changeCircleColor('#d752b1')"
+          />
+        </li>
+      </nav>
+      <img class="focusImage" src="./assets/img1.png" alt="shake" />
+      <div class="circle"></div>
+      <nav class="social-media">
+        <li>
+          <a href="#"><img src="./assets/facebook.png" alt="facebook" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./assets/twitter.png" alt="twitter" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./assets/instagram.png" alt="instagram" /></a>
+        </li>
+      </nav>
+    </section>
+    <script type="text/javascript">
+      const imgSlider = (img) => {
+        document.querySelector('.focusImage').src = img;
+      };
+      const changeCircleColor = (color) => {
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+      };
+    </script>
+  </body>
+</html>
